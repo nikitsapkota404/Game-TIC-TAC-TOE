@@ -1,0 +1,88 @@
+body {
+    background-color: grey;
+    text-align: center;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vmin;
+}
+
+.game-box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 40%;
+    border: none;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    font-size: 8vmin;
+    color: red;
+    cursor: pointer;
+}
+
+.game-box:not(.played):hover {
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.9);
+}
+
+.reset-btn {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    width: 10rem;
+    padding: 1rem;
+    font-size: 1.25rem;
+    border: none;
+    border-radius: 3rem;
+    background-color: pink;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.reset-btn:hover {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+}
+
+.win-msg {
+    font-weight: bold;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidemsg {
+    display: none;
+}
+
+#winner, #draw {
+    font-size: 7vmin;
+    margin: 0.5rem 0;
+}
+
+#winner {
+    color: lime;
+}
+
+#draw {
+    color: red;
+}
+@keyframes winBlink {
+    0%   { transform: scale(1); background-color: yellow; }
+    50%  { transform: scale(1.2); background-color: lightgreen; }
+    100% { transform: scale(1); background-color: yellow; }
+  }
+  
+  .win-animation {
+    animation: winBlink 0.6s ease-in-out 3; /* 3 times blink */
+    border: 3px solid lime;
+  }
+  
