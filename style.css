@@ -1,6 +1,8 @@
 body {
     background-color: grey;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
@@ -75,14 +77,59 @@ body {
 #draw {
     color: red;
 }
+
 @keyframes winBlink {
     0%   { transform: scale(1); background-color: yellow; }
     50%  { transform: scale(1.2); background-color: lightgreen; }
     100% { transform: scale(1); background-color: yellow; }
-  }
-  
-  .win-animation {
+}
+
+.win-animation {
     animation: winBlink 0.6s ease-in-out 3; /* 3 times blink */
     border: 3px solid lime;
-  }
-  
+}
+
+/* For Tablets */
+@media (max-width: 768px) {
+    .game {
+        height: 70vmin;
+        width: 70vmin;
+    }
+
+    .game-box {
+        height: 16vmin;
+        width: 16vmin;
+        font-size: 7vmin;
+    }
+
+    .reset-btn {
+        width: 8rem;
+        font-size: 1.1rem;
+    }
+
+    #winner, #draw {
+        font-size: 6vmin;
+    }
+}
+/*For mobile devices  */
+@media (max-width: 480px) {
+    .game {
+        height: 80vmin;
+        width: 80vmin;
+    }
+
+    .game-box {
+        height: 14vmin;
+        width: 14vmin;
+        font-size: 6vmin;
+    }
+
+    .reset-btn {
+        width: 7rem;
+        font-size: 1rem;
+    }
+
+    #winner, #draw {
+        font-size: 5vmin;
+    }
+}
