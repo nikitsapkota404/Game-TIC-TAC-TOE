@@ -25,7 +25,7 @@ body {
     width: 18vmin;
     border-radius: 40%;
     border: none;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
     font-size: 8vmin;
     color: red;
     cursor: pointer;
